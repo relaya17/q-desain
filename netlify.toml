@@ -5,8 +5,8 @@
   # Directory that contains the deploy-ready HTML files and assets
   publish = "dist"
   
-  # Default build command
-  command = "pnpm run build"
+  # Default build command - runs from apps/client directory
+  command = "pnpm install && pnpm run build"
 
 [build.environment]
   # Node.js version
@@ -14,6 +14,9 @@
   
   # pnpm version
   PNPM_VERSION = "8"
+  
+  # Force clean build
+  NETLIFY_CACHE_ID = "v2"
 
 # Redirect rules for SPA (Single Page Application)
 [[redirects]]
