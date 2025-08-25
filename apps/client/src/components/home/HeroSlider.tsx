@@ -116,11 +116,27 @@ const HeroSlider = () => {
               backgroundColor: { xs: 'rgba(255, 255, 255, 0.1)', md: 'rgba(0, 0, 0, 0.4)' }
             }}
           />
+          {/* White background overlay for mobile */}
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: { xs: '90%', sm: '80%', md: '0%' },
+              height: { xs: 'auto', md: '0%' },
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              borderRadius: { xs: 2, md: 0 },
+              padding: { xs: 3, md: 0 },
+              display: { xs: 'block', md: 'none' },
+              zIndex: 1
+            }}
+          />
         </motion.div>
       </AnimatePresence>
 
       {/* Content */}
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 3 }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
