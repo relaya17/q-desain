@@ -113,7 +113,7 @@ const HeroSlider = () => {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.4)'
+              backgroundColor: { xs: 'rgba(255, 255, 255, 0.1)', md: 'rgba(0, 0, 0, 0.4)' }
             }}
           />
         </motion.div>
@@ -126,14 +126,14 @@ const HeroSlider = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Box
-            sx={{
-              textAlign: 'center',
-              color: 'white',
-              maxWidth: '800px',
-              mx: 'auto'
-            }}
-          >
+                      <Box
+              sx={{
+                textAlign: 'center',
+                color: { xs: 'grey.900', md: 'white' },
+                maxWidth: '800px',
+                mx: 'auto'
+              }}
+            >
             <Typography
               variant="h2"
               component="h1"
@@ -141,7 +141,7 @@ const HeroSlider = () => {
                 fontWeight: 700,
                 mb: 2,
                 fontSize: { xs: '2.5rem', md: '4rem' },
-                textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                textShadow: { xs: 'none', md: '2px 2px 4px rgba(0,0,0,0.5)' }
               }}
             >
               {slides[currentSlide].title}
@@ -152,9 +152,9 @@ const HeroSlider = () => {
               component="h2"
               sx={{
                 mb: 3,
-                color: 'primary.light',
+                color: { xs: 'primary.main', md: 'primary.light' },
                 fontSize: { xs: '1.25rem', md: '1.75rem' },
-                textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
+                textShadow: { xs: 'none', md: '1px 1px 2px rgba(0,0,0,0.5)' }
               }}
             >
               {slides[currentSlide].subtitle}
@@ -164,9 +164,9 @@ const HeroSlider = () => {
               variant="h6"
               sx={{
                 mb: 4,
-                color: 'grey.200',
+                color: { xs: 'grey.700', md: 'grey.200' },
                 fontSize: { xs: '1rem', md: '1.25rem' },
-                textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+                textShadow: { xs: 'none', md: '1px 1px 2px rgba(0,0,0,0.5)' },
                 maxWidth: '600px',
                 mx: 'auto'
               }}
