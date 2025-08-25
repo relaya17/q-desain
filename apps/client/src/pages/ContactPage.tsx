@@ -151,7 +151,13 @@ const ContactPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <>
+      <SEO 
+        title="צור קשר - iq-design אילת"
+        description="צור קשר עם צוות האדריכלים המקצועי שלנו באילת. קבל ייעוץ חינם לתכנון ועיצוב הבית או הפרויקט המסחרי שלך"
+        image="https://iq-design.netlify.app/og-image.jpg"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
