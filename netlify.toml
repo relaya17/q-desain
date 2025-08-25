@@ -6,7 +6,7 @@
   publish = "dist"
   
   # Default build command - runs from apps/client directory
-  command = "pnpm install && ./node_modules/.bin/tsc && ./node_modules/.bin/vite build"
+  command = "pnpm install && pnpm run build"
 
 [build.environment]
   # Node.js version
