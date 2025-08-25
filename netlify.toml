@@ -18,6 +18,9 @@
   # Force clean build
   NETLIFY_CACHE_ID = "v2"
 
+  # Install devDependencies in production
+  NPM_CONFIG_PRODUCTION = "false"
+
 # Redirect rules for SPA (Single Page Application)
 [[redirects]]
   from = "/*"
