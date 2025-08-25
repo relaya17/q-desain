@@ -15,6 +15,7 @@ import {
   DialogContent,
   IconButton
 } from '@mui/material';
+import SEO from '../components/common/SEO';
 import {
   Close,
   LocationOn,
@@ -43,6 +44,14 @@ interface Project {
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  return (
+    <>
+      <SEO 
+        title="פורטפוליו פרויקטים - iq-design אילת"
+        description="פורטפוליו מגוון של פרויקטי אדריכלות באילת: בתים פרטיים, מלונות, מרכזים מסחריים ועיצוב פנים. דוגמאות לעבודות מקצועיות ואיכותיות"
+        image="https://iq-design.netlify.app/og-image.jpg"
+      />
 
   const categories = [
     { value: 'all', label: 'הכל' },
@@ -404,6 +413,7 @@ const PortfolioPage = () => {
         )}
       </Dialog>
     </div>
+    </>
   );
 };
 

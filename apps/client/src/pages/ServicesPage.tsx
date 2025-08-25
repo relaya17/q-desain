@@ -15,6 +15,7 @@ import {
   ListItemIcon,
   ListItemText
 } from '@mui/material';
+import SEO from '../components/common/SEO';
 import {
   ExpandMore,
   DesignServices,
@@ -35,7 +36,15 @@ const ServicesPage = () => {
     animate: { opacity: 1, y: 0 }
   };
 
-  const services = [
+  return (
+    <>
+      <SEO 
+        title="שירותי אדריכלות - iq-design אילת"
+        description="שירותי אדריכלות מקיפים באילת: תכנון בתים פרטיים, פרויקטים מסחריים, מלונות ומלונאות. צוות אדריכלים מקצועיים עם ניסיון של שנים"
+        image="https://iq-design.netlify.app/og-image.jpg"
+      />
+
+      const services = [
     {
       id: 1,
       title: 'אדריכלות מגורים',
@@ -355,6 +364,7 @@ const ServicesPage = () => {
         </motion.div>
       </Container>
     </div>
+    </>
   );
 };
 

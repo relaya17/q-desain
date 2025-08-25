@@ -14,6 +14,7 @@ import {
   MenuItem,
   Alert
 } from '@mui/material';
+import SEO from '../components/common/SEO';
 import {
   Phone,
   Email,
@@ -33,6 +34,14 @@ const ContactPage = () => {
     message: '',
     service: ''
   });
+
+  return (
+    <>
+      <SEO 
+        title="צור קשר - iq-design אילת"
+        description="צור קשר עם צוות האדריכלים המקצועי שלנו באילת. קבל ייעוץ חינם לתכנון ועיצוב הבית או הפרויקט המסחרי שלך"
+        image="https://iq-design.netlify.app/og-image.jpg"
+      />
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -422,6 +431,7 @@ const ContactPage = () => {
         </motion.div>
       </Container>
     </div>
+    </>
   );
 };
 

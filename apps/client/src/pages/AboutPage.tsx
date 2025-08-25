@@ -8,6 +8,7 @@ import {
   Avatar,
   Chip
 } from '@mui/material';
+import SEO from '../components/common/SEO';
 import {
   Business,
   LocationOn,
@@ -50,7 +51,13 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <>
+      <SEO 
+        title="אודות iq-design - אדריכלות יוקרה באילת"
+        description="למדו על iq-design - חברת אדריכלות מובילה באילת עם 25+ שנות ניסיון. צוות מקצועי של אדריכלים ומעצבים ליצירת חללים יוקרתיים"
+        image="https://iq-design.netlify.app/og-image.jpg"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -239,6 +246,7 @@ const AboutPage = () => {
         </motion.div>
       </Container>
     </div>
+    </>
   );
 };
 
