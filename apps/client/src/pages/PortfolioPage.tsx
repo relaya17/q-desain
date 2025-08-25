@@ -45,14 +45,6 @@ const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  return (
-    <>
-      <SEO 
-        title="פורטפוליו פרויקטים - iq-design אילת"
-        description="פורטפוליו מגוון של פרויקטי אדריכלות באילת: בתים פרטיים, מלונות, מרכזים מסחריים ועיצוב פנים. דוגמאות לעבודות מקצועיות ואיכותיות"
-        image="https://iq-design.netlify.app/og-image.jpg"
-      />
-
   const categories = [
     { value: 'all', label: 'הכל' },
     { value: 'residential', label: 'מגורים' },
@@ -156,27 +148,33 @@ const PortfolioPage = () => {
         duration: '14 חודשים',
         services: ['אדריכלות', 'עיצוב פנים', 'ניהול פרויקט'],
         features: ['גגון פרטי', 'בריכה קטנה', 'מטבח יוקרתי', 'מעלית פרטית']
-      }
-    }
-  ];
+             }
+     }
+   ];
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+   const filteredProjects = selectedCategory === 'all' 
+     ? projects 
+     : projects.filter(project => project.category === selectedCategory);
 
-  const handleCategoryChange = (_event: any, newValue: any) => {
-    setSelectedCategory(newValue);
-  };
+   const handleCategoryChange = (_event: any, newValue: any) => {
+     setSelectedCategory(newValue);
+   };
 
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-  };
+   const handleProjectClick = (project: Project) => {
+     setSelectedProject(project);
+   };
 
-  const handleCloseDialog = () => {
-    setSelectedProject(null);
-  };
+   const handleCloseDialog = () => {
+     setSelectedProject(null);
+   };
 
-  return (
+   return (
+     <>
+       <SEO 
+         title="פורטפוליו פרויקטים - iq-design אילת"
+         description="פורטפוליו מגוון של פרויקטי אדריכלות באילת: בתים פרטיים, מלונות, מרכזים מסחריים ועיצוב פנים. דוגמאות לעבודות מקצועיות ואיכותיות"
+         image="https://iq-design.netlify.app/og-image.jpg"
+       />
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       {/* Hero Section */}
       <motion.div

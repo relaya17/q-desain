@@ -37,14 +37,6 @@ const ServicesPage = () => {
   };
 
   const services = [
-
-  return (
-    <>
-      <SEO 
-        title="שירותי אדריכלות - iq-design אילת"
-        description="שירותי אדריכלות מקיפים באילת: תכנון בתים פרטיים, פרויקטים מסחריים, מלונות ומלונאות. צוות אדריכלים מקצועיים עם ניסיון של שנים"
-        image="https://iq-design.netlify.app/og-image.jpg"
-      />
     {
       id: 1,
       title: 'אדריכלות מגורים',
@@ -186,6 +178,12 @@ const ServicesPage = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="שירותי אדריכלות - iq-design אילת"
+        description="שירותי אדריכלות מקיפים באילת: תכנון בתים פרטיים, פרויקטים מסחריים, מלונות ומלונאות. צוות אדריכלים מקצועיים עם ניסיון של שנים"
+        image="https://iq-design.netlify.app/og-image.jpg"
+      />
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       {/* Hero Section */}
       <motion.div
