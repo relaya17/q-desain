@@ -35,6 +35,8 @@ const ContactPage = () => {
     service: ''
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   return (
     <>
       <SEO 
@@ -42,8 +44,6 @@ const ContactPage = () => {
         description="צור קשר עם צוות האדריכלים המקצועי שלנו באילת. קבל ייעוץ חינם לתכנון ועיצוב הבית או הפרויקט המסחרי שלך"
         image="https://iq-design.netlify.app/og-image.jpg"
       />
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const contactMutation = useMutation({
     mutationFn: async (data: any) => {
